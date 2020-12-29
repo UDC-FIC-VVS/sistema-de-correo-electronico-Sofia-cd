@@ -2,7 +2,10 @@ package gal.udc.fic.vvs.email.archivo;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.pholser.junit.quickcheck.Property;
+import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
 /**
  * Esta clase tiene la finalidad de probar la funcionalidad de la clase Audio.
@@ -10,10 +13,9 @@ import org.junit.Test;
  * @author sofia
  *
  */
-public class AudioTest {
+@RunWith(JUnitQuickcheck.class)
+public class AudioProperties {
 
-	private final String nombre = "Audio";
-	private final String contenido = "12345";
 	private final String mimeType = "audio/ogg";
 
 	/**
@@ -24,10 +26,13 @@ public class AudioTest {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja
 	 * <p>
-	 * negra positiva. Mecanismo de selección de datos:
+	 * negra positiva.
+	 * <p>
+	 * Mecanismo de selección de datos: selección de datos aleatoria
 	 */
-	@Test
-	public void audioObtenerMimeTypeCorrectly() {
+
+	@Property
+	public void obtenerMimeTypeAudio(String nombre, String contenido) {
 		Audio audio = new Audio(nombre, contenido);
 		assertEquals(mimeType, audio.obtenerMimeType());
 	}
@@ -40,12 +45,15 @@ public class AudioTest {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja
 	 * <p>
-	 * negra positiva. Mecanismo de selección de datos:
+	 * negra positiva.
+	 * <p>
+	 * Mecanismo de selección de datos: selección de datos aleatoria
 	 */
-	@Test
-	public void audioObtenerNombreCorrectly() {
+	@Property
+	public void obtenerNombreAudio(String nombre, String contenido) {
 		Audio audio = new Audio(nombre, contenido);
 		assertEquals(nombre, audio.obtenerNombre());
+
 	}
 
 	/**
@@ -56,12 +64,13 @@ public class AudioTest {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria
 	 */
-	@Test
-	public void audioObtenerContenidoCorrectly() {
+	@Property
+	public void obtenerContenidoAudio(String nombre, String contenido) {
 		Audio audio = new Audio(nombre, contenido);
 		assertEquals(contenido, audio.obtenerContenido());
+
 	}
 
 	/**
@@ -72,12 +81,13 @@ public class AudioTest {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria
 	 */
-	@Test
-	public void audioObtenerTamañoCorrectly() {
+	@Property
+	public void obtenerTamañoAudio(String nombre, String contenido) {
 		Audio audio = new Audio(nombre, contenido);
 		assertEquals(contenido.length(), audio.obtenerTamaño());
+
 	}
 
 	/**
@@ -88,11 +98,13 @@ public class AudioTest {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria
 	 */
-	@Test
-	public void audioObtenerPreVisualizacionCorrectly() {
+	@Property
+	public void obtenerPreVisualizacionAudio(String nombre, String contenido) {
 		Audio audio = new Audio(nombre, contenido);
 		assertEquals(nombre + "(" + contenido.length() + " bytes, " + mimeType + ")", audio.obtenerPreVisualizacion());
+
 	}
+
 }
