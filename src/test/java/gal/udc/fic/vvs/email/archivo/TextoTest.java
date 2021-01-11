@@ -2,7 +2,10 @@ package gal.udc.fic.vvs.email.archivo;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.pholser.junit.quickcheck.Property;
+import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
 /**
  * Esta clase tiene la finalidad de probar la funcionalidad de la clase Texto.
@@ -10,10 +13,9 @@ import org.junit.Test;
  * @author sofia
  *
  */
-public class TextoTest {
 
-	private final String nombre = "Texto";
-	private final String contenido = "12345";
+@RunWith(JUnitQuickcheck.class)
+public class TextoTest {
 	private final String mimeType = "text/plain";
 
 	/**
@@ -22,14 +24,14 @@ public class TextoTest {
 	 * <p>
 	 * Nivel de la prueba: Unidad
 	 * <p>
-	 * Categoría: prueba funcional dinámica de caja
+	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * negra positiva. Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
-	@Test
-	public void audioObtenerMimeTypeCorrectly() {
-		Texto audio = new Texto(nombre, contenido);
-		assertEquals(mimeType, audio.obtenerMimeType());
+	@Property
+	public void audioObtenerMimeTypeCorrectly(String nombre, String contenido) {
+		Texto texto = new Texto(nombre, contenido);
+		assertEquals(mimeType, texto.obtenerMimeType());
 	}
 
 	/**
@@ -38,14 +40,14 @@ public class TextoTest {
 	 * <p>
 	 * Nivel de la prueba: Unidad
 	 * <p>
-	 * Categoría: prueba funcional dinámica de caja
+	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * negra positiva. Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
-	@Test
-	public void audioObtenerNombreCorrectly() {
-		Texto audio = new Texto(nombre, contenido);
-		assertEquals(nombre, audio.obtenerNombre());
+	@Property
+	public void audioObtenerNombreCorrectly(String nombre, String contenido) {
+		Texto texto = new Texto(nombre, contenido);
+		assertEquals(nombre, texto.obtenerNombre());
 	}
 
 	/**
@@ -54,14 +56,14 @@ public class TextoTest {
 	 * <p>
 	 * Nivel de la prueba: Unidad
 	 * <p>
-	 * Categoría: prueba funcional dinámica de caja
+	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * negra positiva. Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
-	@Test
-	public void audioObtenerContenidoCorrectly() {
-		Texto audio = new Texto(nombre, contenido);
-		assertEquals(contenido, audio.obtenerContenido());
+	@Property
+	public void audioObtenerContenidoCorrectly(String nombre, String contenido) {
+		Texto texto = new Texto(nombre, contenido);
+		assertEquals(contenido, texto.obtenerContenido());
 	}
 
 	/**
@@ -70,14 +72,14 @@ public class TextoTest {
 	 * <p>
 	 * Nivel de la prueba: Unidad
 	 * <p>
-	 * Categoría: prueba funcional dinámica de caja
+	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * negra positiva. Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
-	@Test
-	public void audioObtenerTamañoCorrectly() {
-		Texto audio = new Texto(nombre, contenido);
-		assertEquals(contenido.length(), audio.obtenerTamaño());
+	@Property
+	public void audioObtenerTamañoCorrectly(String nombre, String contenido) {
+		Texto texto = new Texto(nombre, contenido);
+		assertEquals(contenido.length(), texto.obtenerTamaño());
 	}
 
 	/**
@@ -86,14 +88,14 @@ public class TextoTest {
 	 * <p>
 	 * Nivel de la prueba: Unidad
 	 * <p>
-	 * Categoría: prueba funcional dinámica de caja
+	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * negra positiva. Mecanismo de selección de datos:
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
-	@Test
-	public void audioObtenerPreVisualizacionCorrectly() {
-		Texto audio = new Texto(nombre, contenido);
-		assertEquals(nombre + "(" + contenido.length() + " bytes, " + mimeType + ")", audio.obtenerPreVisualizacion());
+	@Property
+	public void audioObtenerPreVisualizacionCorrectly(String nombre, String contenido) {
+		Texto texto = new Texto(nombre, contenido);
+		assertEquals(nombre + "(" + contenido.length() + " bytes, " + mimeType + ")", texto.obtenerPreVisualizacion());
 	}
 
 }

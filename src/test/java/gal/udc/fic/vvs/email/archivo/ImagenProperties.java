@@ -16,8 +16,6 @@ import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 @RunWith(JUnitQuickcheck.class)
 public class ImagenProperties {
 
-	private final String nombre = "Imagen";
-	private final String contenido = "12345";
 	private final String mimeType = "image/png";
 
 	/**
@@ -28,7 +26,7 @@ public class ImagenProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void obtenerMimeTypeImgen(String nombre, String contenido) {
@@ -44,7 +42,7 @@ public class ImagenProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void audioObtenerNombreCorrectly(String nombre, String contenido) {
@@ -60,7 +58,7 @@ public class ImagenProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void audioObtenerContenidoCorrectly(String nombre, String contenido) {
@@ -76,7 +74,7 @@ public class ImagenProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void audioObtenerTamañoCorrectly(String nombre, String contenido) {
@@ -92,7 +90,7 @@ public class ImagenProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void audioObtenerPreVisualizacionCorrectly(String nombre, String contenido) {

@@ -24,11 +24,9 @@ public class AudioProperties {
 	 * <p>
 	 * Nivel de la prueba: Unidad
 	 * <p>
-	 * Categoría: prueba funcional dinámica de caja
+	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * negra positiva.
-	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 
 	@Property
@@ -43,11 +41,9 @@ public class AudioProperties {
 	 * <p>
 	 * Nivel de la prueba: Unidad
 	 * <p>
-	 * Categoría: prueba funcional dinámica de caja
+	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * negra positiva.
-	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void obtenerNombreAudio(String nombre, String contenido) {
@@ -64,7 +60,7 @@ public class AudioProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void obtenerContenidoAudio(String nombre, String contenido) {
@@ -81,7 +77,7 @@ public class AudioProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void obtenerTamañoAudio(String nombre, String contenido) {
@@ -98,7 +94,7 @@ public class AudioProperties {
 	 * <p>
 	 * Categoría: prueba funcional dinámica de caja negra positiva.
 	 * <p>
-	 * Mecanismo de selección de datos: selección de datos aleatoria
+	 * Mecanismo de selección de datos: selección de datos aleatoria.
 	 */
 	@Property
 	public void obtenerPreVisualizacionAudio(String nombre, String contenido) {
